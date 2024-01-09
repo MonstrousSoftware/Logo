@@ -67,7 +67,7 @@ public class Main extends ApplicationAdapter
 		//light = new DirectionalLightEx();
 		light = new DirectionalShadowLight(SHADOW_MAP_SIZE, SHADOW_MAP_SIZE).setViewport(5,5,5,40);
 
-		light.direction.set(1, -3, 1).nor();
+		light.direction.set(1, -3, -1).nor();
 		light.color.set(Color.WHITE);
         light.intensity = 10f;
 		sceneManager.environment.add(light);
