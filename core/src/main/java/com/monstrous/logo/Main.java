@@ -13,6 +13,7 @@ import net.mgsx.gltf.scene3d.attributes.PBRFloatAttribute;
 import net.mgsx.gltf.scene3d.attributes.PBRTextureAttribute;
 import net.mgsx.gltf.scene3d.lights.DirectionalLightEx;
 import net.mgsx.gltf.scene3d.lights.DirectionalShadowLight;
+import net.mgsx.gltf.scene3d.lights.PointLightEx;
 import net.mgsx.gltf.scene3d.scene.Scene;
 import net.mgsx.gltf.scene3d.scene.SceneAsset;
 import net.mgsx.gltf.scene3d.scene.SceneManager;
@@ -68,7 +69,18 @@ public class Main extends ApplicationAdapter
 
 		light.direction.set(1, -3, 1).nor();
 		light.color.set(Color.WHITE);
+        light.intensity = 10f;
 		sceneManager.environment.add(light);
+
+//        PointLightEx pointLight1 = new PointLightEx();
+//        pointLight1.position.set(2.4f, 0.7f, -3.1f);
+//        pointLight1.intensity = 20f;
+//        sceneManager.environment.add(pointLight1);
+//
+//        PointLightEx pointLight2 = new PointLightEx();
+//        pointLight2.position.set(-0.5f, -0.2f, 1.79f);
+//        pointLight2.intensity = 20f;
+//        sceneManager.environment.add(pointLight2);
 
 		// setup quick IBL (image based lighting)
 		IBLBuilder iblBuilder = IBLBuilder.createOutdoor(light);
@@ -80,7 +92,7 @@ public class Main extends ApplicationAdapter
 		// This texture is provided by the library, no need to have it in your assets.
 		brdfLUT = new Texture(Gdx.files.classpath("net/mgsx/gltf/shaders/brdfLUT.png"));
 
-		sceneManager.setAmbientLight(0.1f);
+		sceneManager.setAmbientLight(0.2f);
 		sceneManager.environment.set(new PBRTextureAttribute(PBRTextureAttribute.BRDFLUTTexture, brdfLUT));
 		sceneManager.environment.set(PBRCubemapAttribute.createSpecularEnv(specularCubemap));
 		sceneManager.environment.set(PBRCubemapAttribute.createDiffuseEnv(diffuseCubemap));
