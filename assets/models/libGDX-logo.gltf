@@ -1,6 +1,5 @@
 {
 	"asset":{
-		"copyright":"Monstrous Software",
 		"generator":"Khronos glTF Blender I/O v3.5.30",
 		"version":"2.0"
 	},
@@ -21,6 +20,15 @@
 	"nodes":[
 		{
 			"mesh":0,
+			"name":"logo-extruded-beveled",
+			"translation":[
+				0,
+				0.07083567976951599,
+				0
+			]
+		},
+		{
+			"mesh":1,
 			"name":"backdrop",
 			"rotation":[
 				0,
@@ -34,47 +42,13 @@
 				23.899995803833008
 			],
 			"translation":[
-				0,
-				-0.6918765306472778,
-				0
-			]
-		},
-		{
-			"mesh":1,
-			"name":"logo-extruded-beveled",
-			"translation":[
-				0,
-				0.07083567976951599,
-				0
+				0.27921056747436523,
+				-1.115356683731079,
+				16.67951011657715
 			]
 		}
 	],
 	"materials":[
-		{
-			"doubleSided":true,
-			"extensions":{
-				"KHR_materials_specular":{
-					"specularColorFactor":[
-						2.371357614441398,
-						2.371357614441398,
-						2.371357614441398
-					]
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
-				}
-			},
-			"name":"background",
-			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.1511242538690567,
-					0.416980504989624,
-					0.8000000715255737,
-					1
-				],
-				"roughnessFactor":0.24611398577690125
-			}
-		},
 		{
 			"doubleSided":true,
 			"name":"RedCapitals",
@@ -100,13 +74,38 @@
 					1
 				],
 				"metallicFactor":0.6735751032829285,
-				"roughnessFactor":0.5
+				"roughnessFactor":0.3860103487968445
+			}
+		},
+		{
+			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						2.371357614441398,
+						2.371357614441398,
+						2.371357614441398
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
+			"name":"background",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.1511242538690567,
+					0.416980504989624,
+					0.8000000715255737,
+					1
+				],
+				"roughnessFactor":0.940414547920227
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Plane.019",
+			"name":"Plane.018",
 			"primitives":[
 				{
 					"attributes":{
@@ -116,12 +115,7 @@
 					},
 					"indices":3,
 					"material":0
-				}
-			]
-		},
-		{
-			"name":"Plane.018",
-			"primitives":[
+				},
 				{
 					"attributes":{
 						"POSITION":4,
@@ -130,7 +124,12 @@
 					},
 					"indices":7,
 					"material":1
-				},
+				}
+			]
+		},
+		{
+			"name":"Plane.019",
+			"primitives":[
 				{
 					"attributes":{
 						"POSITION":8,
@@ -147,41 +146,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":84,
-			"max":[
-				1,
-				0.6161537170410156,
-				1
-			],
-			"min":[
-				-1,
-				0,
-				-1
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":84,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":84,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":3,
-			"componentType":5123,
-			"count":246,
-			"type":"SCALAR"
-		},
-		{
-			"bufferView":4,
-			"componentType":5126,
-			"count":1312,
+			"count":1324,
 			"max":[
 				2.483664035797119,
 				0.4192250669002533,
@@ -195,27 +160,27 @@
 			"type":"VEC3"
 		},
 		{
-			"bufferView":5,
+			"bufferView":1,
 			"componentType":5126,
-			"count":1312,
+			"count":1324,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":6,
+			"bufferView":2,
 			"componentType":5126,
-			"count":1312,
+			"count":1324,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":7,
+			"bufferView":3,
 			"componentType":5123,
 			"count":5400,
 			"type":"SCALAR"
 		},
 		{
-			"bufferView":8,
+			"bufferView":4,
 			"componentType":5126,
-			"count":1166,
+			"count":532,
 			"max":[
 				-1.0952026844024658,
 				0.4177508056163788,
@@ -229,101 +194,135 @@
 			"type":"VEC3"
 		},
 		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":532,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":532,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":7,
+			"componentType":5123,
+			"count":1872,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":8,
+			"componentType":5126,
+			"count":84,
+			"max":[
+				1,
+				2.161850929260254,
+				1
+			],
+			"min":[
+				-1,
+				0,
+				-1
+			],
+			"type":"VEC3"
+		},
+		{
 			"bufferView":9,
 			"componentType":5126,
-			"count":1166,
+			"count":84,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":10,
 			"componentType":5126,
-			"count":1166,
+			"count":84,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":11,
 			"componentType":5123,
-			"count":1872,
+			"count":246,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1008,
+			"byteLength":15888,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":672,
-			"byteOffset":1008,
+			"byteLength":10592,
+			"byteOffset":15888,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1008,
-			"byteOffset":1680,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":492,
-			"byteOffset":2688,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":15744,
-			"byteOffset":3180,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":10496,
-			"byteOffset":18924,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":15744,
-			"byteOffset":29420,
+			"byteLength":15888,
+			"byteOffset":26480,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10800,
-			"byteOffset":45164,
+			"byteOffset":42368,
 			"target":34963
 		},
 		{
 			"buffer":0,
-			"byteLength":13992,
-			"byteOffset":55964,
+			"byteLength":6384,
+			"byteOffset":53168,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":9328,
-			"byteOffset":69956,
+			"byteLength":4256,
+			"byteOffset":59552,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":13992,
-			"byteOffset":79284,
+			"byteLength":6384,
+			"byteOffset":63808,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":3744,
-			"byteOffset":93276,
+			"byteOffset":70192,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":1008,
+			"byteOffset":73936,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":672,
+			"byteOffset":74944,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1008,
+			"byteOffset":75616,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":492,
+			"byteOffset":76624,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":97020,
+			"byteLength":77116,
 			"uri":"libGDX-logo.bin"
 		}
 	]

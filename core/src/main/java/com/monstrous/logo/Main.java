@@ -69,7 +69,7 @@ public class Main extends ApplicationAdapter
 
 		light.direction.set(1, -3, -1).nor();
 		light.color.set(Color.WHITE);
-        light.intensity = 10f;
+        light.intensity = 2f;
 		sceneManager.environment.add(light);
 
 //        PointLightEx pointLight1 = new PointLightEx();
